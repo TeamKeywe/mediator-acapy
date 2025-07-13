@@ -1,0 +1,61 @@
+label: 'mediator-acapy'
+
+# Endpoints
+endpoint:
+  - 'ws://med.keywe.site/'
+  - 'http://192.168.0.82:8010'
+
+
+# Transport settings
+inbound-transport:
+  - [http, 0.0.0.0, 8010]
+  - [ws, 0.0.0.0, 8000]
+
+outbound-transport:
+  - http
+  - ws
+
+# Admin settings
+admin: [0.0.0.0, 8001]
+admin-insecure-mode: true
+
+# Wallet settings
+wallet-type: askar
+wallet-name: base_wallet
+wallet-key: basekey
+wallet-storage-type: sqlite
+wallet-storage-config: '{"path":"/tmp/base_wallet.db"}'
+
+# Provisioning
+auto-provision: true
+
+# Ledger settings
+no-ledger: true
+
+# JWT settings
+jwt-secret: mysupersecret
+
+# Connection settings
+auto-accept-invites: true
+auto-accept-requests: true
+auto-respond-credential-proposal: true
+auto-respond-credential-offer: true
+auto-respond-credential-request: true
+auto-respond-presentation-request: true
+auto-verify-presentation: true
+invite-multi-use: true
+# Queue settings
+enable-undelivered-queue: true
+
+# DIDComm settings
+emit-new-didcomm-prefix: true
+emit-new-didcomm-mime-type: true
+
+# Connection monitoring
+auto-ping-connection: true
+
+# Mediation settings
+open-mediation: true
+
+# Logging
+log-level: debug
